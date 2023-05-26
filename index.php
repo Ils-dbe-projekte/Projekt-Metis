@@ -22,7 +22,9 @@
  * SOFTWARE.
  */
 
-require_once('system/common.php');
+require_once('config/system.php'); //Lade die Konfiguration
+require_once('system/common.php'); //Lade die Systemfunktionen
+
 
 echo "Hallo Welt ich bins Metis in Version: ".METIS_VERSION."!";
 echo "Ich laufe auf PHP: ". PHP_VERSION.' und '.PHP_OS;
