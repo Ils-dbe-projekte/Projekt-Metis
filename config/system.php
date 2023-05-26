@@ -22,7 +22,4 @@
  * SOFTWARE.
  */
 
-require_once('system/common.php');
-
-echo "Hallo Welt ich bins Metis in Version: ".METIS_VERSION."!";
-echo "Ich laufe auf PHP: ". PHP_VERSION.' und '.PHP_OS;
+const IS_DEBUG = false; //Schaltet das Debugging ein oder aus

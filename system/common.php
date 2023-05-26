@@ -22,7 +22,11 @@
  * SOFTWARE.
  */
 
-require_once('system/common.php');
+const METIS_VERSION = '0.0.1';
 
-echo "Hallo Welt ich bins Metis in Version: ".METIS_VERSION."!";
-echo "Ich laufe auf PHP: ". PHP_VERSION.' und '.PHP_OS;
+// Debugging Nachrichten aktivieren
+if(IS_DEBUG) { //Sehe config\system.php
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+}
