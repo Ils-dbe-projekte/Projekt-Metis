@@ -22,4 +22,4 @@
  * SOFTWARE.
  */
 
-const IS_DEBUG = false; //Schaltet das Debugging ein oder aus
+const IS_DEBUG = true; //Schaltet das Debugging ein oder aus

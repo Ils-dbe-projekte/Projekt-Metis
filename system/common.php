@@ -22,11 +22,66 @@
  * SOFTWARE.
  */
 
-const METIS_VERSION = '0.0.1';
-
 // Debugging Nachrichten aktivieren
 if(IS_DEBUG) { //Sehe config\system.php
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
+}
+
+/**
+ * Enthält alle Kern-Systemfunktionen von Metis
+ * Class Common
+ */
+
+Instanzierung
+class Common {
+    private const METIS_VERSION = '0.0.1';
+
+    private static ?Common $instance = null; //Kann "null" oder eine Instanz von Common sein
+
+    public function __construct()
+    {
+        // Konstruktor
+
+    }
+
+    /**
+     * Gibt die PHP Version zurück
+     * @return string
+     */
+    public function getPHPVersion(): string {
+        return PHP_VERSION;
+    }
+
+    /**
+     * Gibt das Betriebssystem zurück
+     * @return string
+     */
+    public function getOS(): string {
+        return PHP_OS;
+    }
+
+    /**
+     * Gibt die Metis Version zurück
+     * @return string
+     */
+    public function getMetisVersion(): string {
+        return self::METIS_VERSION;
+    }
+
+    /**
+     * Gibt die Instanz von Common zurück
+     * @return Common
+     */
+    public static function getInstance(): Common
+    {
+        // Singleton
+        if (self::$instance instanceof self) { //Ist die Instanz schon vorhanden?
+            return self::$instance; //Gib eine Instanz zurück
+        }
+
+        self::$instance = new Common(); //Erstelle eine neue Instanz
+        return self::$instance;
+    }
 }

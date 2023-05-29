@@ -22,10 +22,28 @@
  * SOFTWARE.
  */
 
-require_once('vendor/autoload.php'); //Lade die Composer Autoload Funktion
+/**
+ * Lade die Composer Autoload Funktion
+ */
+require_once('vendor/autoload.php');
+
+/**
+ * Lade die Konfiguration von Metis
+ */
 require_once('config/system.php'); //Lade die Konfiguration
+
+/**
+ * Lade die Kern-Systemfunktionen von Metis
+ */
 require_once('system/common.php'); //Lade die Systemfunktionen
 
+/**
+ * Hole eine Instanz von Common zum starten des PHP-Skriptes
+ */
+$common = Common::getInstance();
 
-echo "Hallo Welt ich bins Metis in Version: ".METIS_VERSION."!";
-echo "Ich laufe auf PHP: ". PHP_VERSION.' und '.PHP_OS;
+
+//TEST AUSGABE
+
+echo "Hallo Welt ich bin es Metis in Version: ".$common->getMetisVersion()."!<br>";
+echo "Ich laufe auf PHP: ". $common->getPHPVersion().' und '.$common->getOS();
