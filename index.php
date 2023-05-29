@@ -22,6 +22,13 @@
  * SOFTWARE.
  */
 
+// minimum php version
+if (PHP_VERSION_ID < 80100) {
+    die('<b>PHP 8.1+ ist erforderlich!</b>');
+}
+
+define("_ROOT_", __DIR__);
+
 /**
  * Lade die Composer Autoload Funktion
  */
@@ -45,5 +52,9 @@ $common = Common::getInstance();
 
 //TEST AUSGABE
 
-echo "Hallo Welt ich bin es Metis in Version: ".$common->getMetisVersion()."!<br>";
-echo "Ich laufe auf PHP: ". $common->getPHPVersion().' und '.$common->getOS();
+$smarty = $common->getSmarty();
+$smarty->assign('title', 'Hallo Welt');
+$smarty->assign('content', 'Hallo Welt ich bin es Metis in Version: '.
+    $common->getMetisVersion().'!<br>Ich laufe auf PHP: '.
+    $common->getPHPVersion().' und '.$common->getOS());
+$smarty->display('index.tpl');

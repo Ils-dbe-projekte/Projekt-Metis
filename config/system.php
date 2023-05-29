@@ -23,3 +23,5 @@
  */
 
 const IS_DEBUG = true; //Schaltet das Debugging ein oder aus
+
+const SMARTY_DEBUG = true; //Schaltet das Debugging von Smarty ein oder aus
