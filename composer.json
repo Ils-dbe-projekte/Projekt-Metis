@@ -1,0 +1,26 @@
+{
+  "authors": [
+    {
+      "name": "Lucas Eulberg",
+      "email": "godkiller_nt@hammermaps.de",
+      "role": "Developer",
+      "homepage": "https://github.com/hammermaps"
+    }
+  ],
+  "description": "description",
+  "license": "MIT",
+  "minimum-stability": "stable",
+  "name": "ils_dbe/metis",
+  "require": {
+    "psr/log": "3.*",
+    "psr/container": "2.0.2",
+    "psr/cache": "3.*",
+    "monolog/monolog": "3.3.1",
+    "nette/database": "v3.1.7",
+    "nette/finder": "v3.0.0",
+    "nette/robot-loader": "v4.0.0",
+    "smarty/smarty": "v3.1.39",
+    "php": ">=8.1.0",
+    "ext-pdo": "*"
+  }
+}

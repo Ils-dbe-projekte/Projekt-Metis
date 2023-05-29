@@ -22,6 +22,7 @@
  * SOFTWARE.
  */
 
+require_once('vendor/autoload.php'); //Lade die Composer Autoload Funktion
 require_once('config/system.php'); //Lade die Konfiguration
 require_once('system/common.php'); //Lade die Systemfunktionen
 
