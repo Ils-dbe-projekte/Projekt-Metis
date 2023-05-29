@@ -33,8 +33,6 @@ if(IS_DEBUG) { //Sehe config\system.php
  * Enthält alle Kern-Systemfunktionen von Metis
  * Class Common
  */
-
-Instanzierung
 class Common {
     private const METIS_VERSION = '0.0.1';
 
