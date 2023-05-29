@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '405565a979ee7886b28a44ac2be81a5ed5d339eb',
+        'reference' => 'f5a61cb111b8078597231f726dc3c27f65c6c8f9',
         'name' => 'ils_dbe/metis',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '405565a979ee7886b28a44ac2be81a5ed5d339eb',
+            'reference' => 'f5a61cb111b8078597231f726dc3c27f65c6c8f9',
             'dev_requirement' => false,
         ),
         'monolog/monolog' => array(

@@ -16,7 +16,6 @@ use DateTimeZone;
 use Fiber;
 use Monolog\Handler\HandlerInterface;
 use Monolog\Processor\ProcessorInterface;
-use Psr\Log\LoggerInterface;
 use Psr\Log\InvalidArgumentException;
 use Psr\Log\LogLevel;
 use Throwable;
@@ -32,7 +31,7 @@ use WeakMap;
  * @author Jordi Boggiano <j.boggiano@seld.be>
  * @final
  */
-class Logger implements LoggerInterface, ResettableInterface
+class Logger implements ResettableInterface
 {
     /**
      * Detailed debug information
